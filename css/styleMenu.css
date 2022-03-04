@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+  line-height: 1.5em;
+  margin:0;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height : 100vh;
+  background-color: #eee;
+}
+
+a{
+  text-decoration: none;
+  color: #222;
+}
+
+.testimonial-section{
+  width: 800px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.testimonial-section h1{
+  font-size: 25px;
+}
+.testimonial-section h1 span{
+  color:crimson
+}
+.testimonial-pic{}
+
+.testimonial-pic img{
+  width: 100px;
+  filter: grayscale(1);
+  margin:5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.testimonial-pic img.active{
+  border-radius: 50%;
+  filter : grayscale(0);
+}
+
+.testimonial{}
+
+.testimonial .content{
+  display:none;
+}
+.testimonial .content.active{
+  display:block;
+}
+.testimonial .content p:nth-child(2){
+  font-weight:bold;
+}

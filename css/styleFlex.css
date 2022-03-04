@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+body{
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5em;
+    margin:0;
+    color : white;
+    background-color: black;
+  }
+
+.container{
+  display:flex;
+  height: 100vh;
+}
+
+.container .item{
+  flex : 1;
+  border : 5px solid black;
+  overflow: hidden;
+  position: relative;
+  transition : 0.5s;
+  text-align: center;
+}
+
+.container .item img{
+  height : 100vh;
+  width: inherit;
+  
+}
+
+.container .item .text{
+  position : absolute;
+  width: 100%;
+  height : 300px;
+  bottom : -300px;
+  text-align: center;
+  background-color: #000;
+  transition: 0.5s;
+  padding : 20px;
+  box-sizing: border-box;
+  /* padding-top: 40px; */
+}
+
+.container:hover .item{
+  flex : 1;
+}
+
+.container .item:hover{
+  flex:3;
+  filter: grayscale(1);
+}
+
+.item:hover .text{
+  bottom:-100px;
+}
+
+.text:before {
+  content:'';
+  position: absolute;
+  background-color: #000;
+  width: 100%;
+  height: 30px;
+  left:0;
+  top:-10px;
+  transform: rotate(-3deg) scale(1.3);
+
+}

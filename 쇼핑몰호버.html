@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/styleShop.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://kit.fontawesome.com/91abb88819.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <img src="images/model-female.png" alt="">
+    <div class="menubar">
+      <div class="context">
+        <div class="title">
+          <span>Nightgown</span>
+          <span>Women's Designer Wear</span>
+        </div>
+        <div class="price">
+          <span>$55.99</span>
+        </div>
+      </div>
+      <!-- <div class = "hoverMenu"> -->
+        <div class="size">
+          <div class="sizemenu">
+            <span>Sizes</span>
+            <div class="sizebtn">
+              <button>XS</button>
+              <button>S</button>
+              <button>M</button>
+              <button>L</button>
+              <button>XL</button>
+            </div>
+          </div>
+          <div class="icon">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
+  
+        <div class="color">
+          <div>Colors</div>
+          <div class="colorbtn">
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+          </div>
+  
+        </div>
+          <button class ="addCart">Add to Cart</button>
+    </div>
+  </div>
+
+  <script>
+
+    $('.icon .fa-solid').click(function(){
+      $(this).toggleClass('active')
+    });
+    $('.colorbtn button').click(function(){
+      $(this).addClass('active')
+      $(this).siblings().removeClass('active')
+    });
+    $('.sizebtn button').click(function(){
+      $(this).addClass('active')
+      $(this).siblings().removeClass('active')
+    });
+
+
+
+  </script>
+</body>
+</html>

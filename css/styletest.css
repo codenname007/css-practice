@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+  line-height: 1.5em;
+  margin:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height : 100vh;
+}
+
+.container{
+  width: 800px;
+  height : 600px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.container h1{
+  text-align: center;
+  margin : 50px;
+}
+  
+.container .slider{
+  position: relative;
+  width: 800px;
+  height: 400px;
+  text-align: center;
+  overflow: hidden;
+  left: 0;
+  top : 0;
+  box-sizing: border-box;
+}
+
+.container .slider .slide-inner{
+  position: absolute;
+  display : flex;
+  width: 2400px;
+  height: 400px;
+  left: 0;
+  top:0;
+  transition: 0.5s;
+  margin : 0;
+  box-sizing: border-box;
+}
+
+.container .slider .slide-inner .test{
+  width: inherit;
+  height: inherit;
+  color : gray;
+}
+
+.footer{
+  margin-top : 40px;
+}
+
+.footer .name{
+  color :black;
+}
+
+.footer .job{
+  color : yellowgreen;
+  display : inline-block
+}
+
+
+
+input[name=slidebutton]{
+  display : none;
+}
+
+.label{
+  position: absolute;
+  bottom : 30px;
+  text-align: center;
+  width: 100%;
+}
+
+label {
+  display: inline-block;
+  background-color: lightgray;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  margin : 10px;
+  cursor: pointer;
+}
+
+.container img{
+  border-radius: 50%;
+  width: 150px;
+}
+
+
+input[id=tab1]:checked ~ .slider .slide-inner{
+  left:0;
+}
+input[id=tab2]:checked ~ .slider .slide-inner{
+  left: -800px;
+}
+input[id=tab3]:checked ~ .slider .slide-inner{
+  left: -1600px;
+}
+
+input[id=tab1]:checked ~ .label label[for=tab1],
+input[id=tab2]:checked ~ .label label[for=tab2],
+input[id=tab3]:checked ~ .label label[for=tab3]{
+  background-color: blueviolet;
+}

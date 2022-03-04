@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+  line-height: 1.5em;
+  margin:0;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height : 100vh;
+}
+
+.container{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container a{
+  position: relative;
+  text-decoration: none;
+  font-size: 40px;
+  color :black;
+  /* border: 1px solid blue; */
+  width: 500px;
+  height: 120px;
+  line-height: 120px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container a:nth-child(1):before,
+.container a:nth-child(2):before
+{
+  content: '';
+  background-color: crimson;
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: 20px;
+  transition: 0.5s;
+}
+
+.container a:nth-child(2):before{
+  right:0;
+}
+
+.container a:nth-child(1):hover:before,
+.container a:nth-child(2):hover:before
+{
+   width: 100%;
+}
+
+.container a:nth-child(3):before
+{
+  content: '';
+  background-color: crimson;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 20px;
+  left:0;
+  transition: 0.5s;
+}
+
+.container a:nth-child(3):hover:before
+{
+  left: calc(100% - 10px);
+}
+
+
+.container a:nth-child(4):before
+{
+  content: '';
+  background-color: crimson;
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: 20px;
+  left:50%;
+  transform : translateX(-50%);
+  transition: 0.5s;
+}
+
+.container a:nth-child(4):hover:before
+{
+  width: 100%;
+}

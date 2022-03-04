@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/styleMenu.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+
+  <div class="testimonial-section">
+    <h1><span>CodingWorks Publishing Online Class with Inflearn</span></h1>
+    <div class="testimonial-pic">
+      <img class ="active" src="images/face-01.jpg" alt="" data-alt="tab1">
+      <img src="images/face-02.jpg" alt="" data-alt="tab2">
+      <img src="images/face-03.jpg" alt="" data-alt="tab3">
+      <img src="images/face-04.jpg" alt="" data-alt="tab4">
+    </div>
+    <div class="testimonial">
+      <div class="content active" id="tab1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, et rerum neque tenetur fugit nisi tempore eum id blanditiis amet porro aperiam iure, architecto sit laboriosam similique, natus inventore labore repellat dignissimos consequuntur officia assumenda numquam. Harum quo necessitatibus assumenda dolorum nostrum! Accusantium saepe odio dicta? Earum aperiam inventore libero dolorem vero adipisci nisi necessitatibus sapiente qui unde, ea quam nam rem id rerum recusandae maxime, dolore eos. Obcaecati sit aliquid voluptas odio, maxime incidunt laborum magni at cum laudantium!</p>
+        <p>Sally, Web Desginer</p>
+      </div>
+      <div class="content" id="tab2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim esse laborum necessitatibus dolore quas nulla! Nostrum possimus consequuntur eaque aspernatur ex explicabo, ab doloremque alias corrupti, ratione numquam ducimus optio, distinctio beatae non! Odit voluptate distinctio hic facere voluptatem quasi delectus veritatis, perspiciatis culpa. Laudantium nostrum cupiditate minima facilis quis adipisci iur ea esse numquam obcaecati harum, minus doloremque.</p>
+        <p>Amy, Graphic Designer</p>
+      </div>
+      <div class="content" id="tab3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, magni, mollitia at fugit nam nesciunt quibusdam hic quod in ullam saepe repellendus culpa optio fuga consequatur ipsam cumque natus ab suscipit minus consequuntur. Amet voluptates impedit dolorem cupiditate, odio quos eaque natus repudiandae. Mollitia placeat ab laboriosam, illo ipsam blanditiis id, maiores doloribus repellendus soluta, vel nostrum minus sequi eos saepe autem quia. Eveniet, sit deserunt a iure, quam sint nihil dolores eos ad laboriosam delectus temporibus nemo molestias accusantium.</p>
+        <p>Jung Ho, Developer</p>
+      </div>
+      <div class="content" id="tab4">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores voluptatum non dolore quo repellat ab porro labore! Optio placeat voluptate, laudantium esse delectus nisi, dicta earum, commodi harum quo dolorem repellendus eaque nesciunt asperiores numquam sed nam excepturi consectetur dolore eveniet accusamus architecto fuga possimus debitis. Officia doloribus fugiat suscipit quia quod! Velit doloribus totam, perferendis veritatis cupiditate recusandae. Eos molestiae iusto repellat esse quo, perspiciatis tempora minima consequatur dignissimos! Error exercitationem debitis dolores dolorum maxime adipisci ipsam dignissimos.
+        </p>
+        <p>Chris, Printing Desinger</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $('.testimonial-pic img').click(function(){
+      $(this).addClass('active')
+      $(this).siblings().removeClass('active')
+
+      $('.testimonial .content').removeClass('active')
+      $('#' + $(this).attr('data-alt')).addClass('active')
+      //tab1 == $(this).attr('data-alt')
+
+    });
+
+    
+  </script>
+
+</body>
+</html>
